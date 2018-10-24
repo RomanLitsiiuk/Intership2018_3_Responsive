@@ -1,0 +1,35 @@
+.form {
+  width: 370px;
+  height: 78px;
+  box-sizing: border-box;
+  margin: 30px 0;
+  position: relative;
+  
+  @media all and (max-width: 1200px){
+    margin: 10px 0;
+  }
+  
+  &__label {
+    display: none;
+  }
+  
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid $inputBorderColor;
+    border-radius: 10px;
+    padding: 24px 85px 23px 10px;
+    font-size: 22px;
+    color: $bottomTextColor;
+  }
+  
+  &__button {
+    @extend .button;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 0;
+    right: 0;
+    border-radius: 0 10px 10px 0;
+  }
+}

@@ -1,0 +1,39 @@
+.main-navigation {
+  display: flex;
+  width: 510px;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  
+  &--header {
+    @media all and (max-width: 1200px){
+      width: 100px;
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    width: 73px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: $headerNavColor;
+    
+    &--header {
+      @media all and (max-width: 1200px) {
+        background-color: $contentButtonColor;
+        width: 44px;
+        margin: 3px;
+        &:nth-child(4),
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: $contentButtonColor;
+      cursor: pointer;
+    }
+  }
+}

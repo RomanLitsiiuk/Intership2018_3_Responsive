@@ -1,0 +1,41 @@
+.card {
+  border: 2px solid $cardBorderColor;
+  box-sizing: border-box;
+  max-width: 268px;
+  margin: 20px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  
+  @media all and (max-width: 1200px) {
+    margin: 10px 0;
+  }
+  
+  @media all and (max-width: 768px) {
+    max-width: 174px;
+  }
+  
+  &__image {
+    max-width: 100%;
+    margin-bottom: -4px;
+  }
+  
+  &__description {
+    position: absolute;
+    box-sizing: border-box;
+    left: 45px;
+    bottom: 5px;
+    width: 170px;
+    border-radius: 12px;
+    height: 24px;
+    background-color: $cardDescriptionBackground;
+    text-align: center;
+    color: $bottomHeadingColor;
+    padding: 5px;
+    
+    @media all and (max-width: 768px) {
+      font-size: 12px;
+      width: 110px;
+    }
+  }
+}

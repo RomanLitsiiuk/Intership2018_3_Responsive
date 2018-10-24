@@ -1,0 +1,114 @@
+.section {
+  @extend .container;
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @media all and (max-width: 1200px){
+    padding: 30px 15px;
+  }
+  
+  &__heading {
+    padding: 20px;
+    font-size: 32px;
+    text-align: center;
+    color: $mainHeadingColor;
+    
+    @media all and (max-width: 1200px){
+      padding: 10px 20px;
+    }
+  
+    @media all and (max-width: 768px){
+      font-size: 22px;
+    }
+    
+    &--main {
+      font-size: 52px;
+      color: $mainHeadingColor;
+      
+      @media all and (max-width: 1200px){
+        font-size: 44px;
+        padding: 10px;
+      }
+  
+      @media all and (max-width: 768px){
+        font-size: 28px;
+      }
+    }
+  
+    &--central-section {
+      color: $centralHeadingColor;
+    }
+    
+    &--bottom-section {
+      color: $bottomHeadingColor;
+      
+      @media all and (max-width: 1200px) {
+        max-width: 320px;
+      }
+    }
+    
+    &--last-section {
+      color: $lastHeadingColor;
+    }
+  }
+  
+  &__text {
+    padding: 10px 0;
+    font-size: 18px;
+    text-align: center;
+    
+    @media all and (max-width: 768px) {
+      font-size: 16px;
+    }
+  
+    &--title {
+      max-width: 760px;
+      color: $titleTextColor;
+    }
+    
+    &--bottom {
+      color: $bottomTextColor;
+      max-width: 960px;
+    }
+    
+    &--last {
+      color: $lastTextColor;
+      max-width: 960px;
+    }
+    
+    &--footer {
+      @extend .section__text--bottom;
+      padding: 50px 0 70px;
+      
+      @media all and (max-width: 1200px) {
+        padding: 20px 0 30px;
+      }
+  
+      @media all and (max-width: 768px) {
+        padding: 20px 0 0;
+      }
+    }
+  }
+  
+  &__images-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    @media all and (max-width: 1200px){
+      flex-direction: column;
+    }
+    
+    &--cards {
+      justify-content: space-between;
+      
+      @media all and (max-width: 1200px) {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  }
+}

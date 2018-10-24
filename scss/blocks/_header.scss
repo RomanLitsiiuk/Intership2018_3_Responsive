@@ -1,0 +1,25 @@
+.header {
+  @extend .container;
+  min-height: 55px;
+  background-color: $headerFooterColor;
+  box-sizing: border-box;
+
+  &__logo-wrap {
+    width: 170px;
+    height: 30px;
+    padding-top: 12px;
+    float: left;
+  }
+  
+  &__navigation-wrap {
+    height: 30px;
+    max-width: 510px;
+    float: right;
+    padding: 12px 0;
+    
+    @media all and (max-width: 1200px){
+      height: auto;
+      padding: 7px 0;
+    }
+  }
+}
